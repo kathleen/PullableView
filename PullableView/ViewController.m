@@ -27,7 +27,6 @@
     pullRightView.handleView.frame = CGRectMake(170, 0, 30, 300);
     
     [self.view addSubview:pullRightView];
-    [pullRightView release];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
     label.backgroundColor = [UIColor darkGrayColor];
@@ -37,7 +36,6 @@
     label.center = CGPointMake(185, 150);
     
     [pullRightView addSubview:label];
-    [label release];
     
     label = [[UILabel alloc] initWithFrame:CGRectMake(4, 120, 200, 30)];
     label.backgroundColor = [UIColor clearColor];
@@ -45,7 +43,6 @@
     label.text = @"I'm not animated";
     
     [pullRightView addSubview:label];
-    [label release];
     
     pullUpView = [[StyledPullableView alloc] initWithFrame:CGRectMake(xOffset, 0, 320, 460)];
     pullUpView.openedCenter = CGPointMake(160 + xOffset,self.view.frame.size.height);
@@ -54,20 +51,18 @@
     pullUpView.handleView.frame = CGRectMake(0, 0, 320, 40);
     pullUpView.delegate = self;
     
-    [self.view addSubview:pullUpView];
-    [pullUpView release];    
+    [self.view addSubview:pullUpView];  
     
     pullUpLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 4, 320, 20)];
-    pullUpLabel.textAlignment = UITextAlignmentCenter;
+    pullUpLabel.textAlignment = NSTextAlignmentCenter;
     pullUpLabel.backgroundColor = [UIColor clearColor];
     pullUpLabel.textColor = [UIColor lightGrayColor];
     pullUpLabel.text = @"Pull me up!";
     
     [pullUpView addSubview:pullUpLabel];
-    [pullUpLabel release];
     
     label = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 320, 64)];
-    label.textAlignment = UITextAlignmentCenter;
+    label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
     label.shadowColor = [UIColor blackColor];
@@ -75,7 +70,6 @@
     label.text = @"I only go half-way up!";
     
     [pullUpView addSubview:label];
-    [label release];
     
     pullDownView = [[StyledPullableView alloc] initWithFrame:CGRectMake(xOffset, 0, 320, 460)];
     pullDownView.openedCenter = CGPointMake(160 + xOffset,230);
@@ -83,10 +77,9 @@
     pullDownView.center = pullDownView.closedCenter;
     
     [self.view addSubview:pullDownView];
-    [pullDownView release];
     
     label = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 64)];
-    label.textAlignment = UITextAlignmentCenter;
+    label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
     label.shadowColor = [UIColor blackColor];
@@ -94,7 +87,6 @@
     label.text = @"Look at this beautiful linen texture!";
     
     [pullDownView addSubview:label];
-    [label release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
